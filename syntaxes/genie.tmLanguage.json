@@ -1,0 +1,44 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Genie",
+  "patterns": [
+    {
+      "include": "#genie"
+    }
+  ],
+  "repository": {
+    "genie": {
+      "patterns": [
+        {
+          "name": "keyword.control.genie",
+          "match": "\\b(action|on|off|counter|debug|delay|echo|eval|evalmath|exit|gosub|goto|if|if_([0-9]+)|else|include|match|matchre|matchwait|math|move|nextroom|pause|put|random|return|save|send|shift|then|timer|var|unvar|wait|waitfor|waiteval|waitforre|when)\\b"
+        },
+        {
+          "name": "keyword.other.genie",
+          "match": "#var|#variable|#alias|#class|config|#gag|#highlight|#layout|#load|#macro|#name|#preset|#profile|#save|#subs|#substitute|#trigger|#window|#unalias|#unclass|#ungag|#unmacro|#unname|#unsubs|#untrigger|#unvar|#beep|#clear|#colors|#comment|#connect|#echo|#edit|#eval|#evalmath|#event|#flash|#help|#if|#keys|#link|#log|#math|#parse|#play|#playsystem|#put|#queue|#script|#send|#statusbar"
+        },
+        {
+          "name": "comment.line.genie",
+          "match": "^([ \t]+)?#.*$"
+        },
+        {
+          "name": "entity.name.tag.genie",
+          "match": "^[a-zA-Z0-9_\\-]+:|%[a-zA-Z_-]+"
+        },
+        {
+          "name": "variable.genie",
+          "match": "(\\$[a-zA-Z0-9]+)\\b"
+        },
+        {
+          "name": "support.function.genie",
+          "match": "cos\\(|sin\\(|tan\\(|floor\\(|ceiling\\(|max\\(|min\\(|arcsin\\(|arccos\\(|arctan\\(|sqrt\\(|log\\(|log10\\(|abs\\(|round\\(|ln\\(|neg\\(|pos\\(|def\\(|contains\\(|count\\(|element\\(|endswith\\(|indexof\\(|instr\\(|instring\\(|lastindexof\\(|len\\(|length\\(|match\\(|matchre\\(|replace\\(|replacere\\(|startswith\\(|substr\\(|substring\\(|tolower\\(|toupper\\(|trim\\("
+        },
+        {
+          "name": "constant.genie",
+          "match": "NULL|\\be\\b|\\bpi\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.genie"
+}
